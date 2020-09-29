@@ -1,0 +1,953 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+a:link,a:visited,a:active{
+    text-decoration: none;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+[type="checkbox"]{
+	display: none;
+}
+
+label{
+	cursor: pointer;
+
+}
+body{
+    overflow-x: hidden;
+}
+/* Tamaño del scroll */
+body::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+/* Estilos barra (thumb) de scroll */
+ body::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+/*
+------------------------------- 
+Fuentes 
+-------------------------------
+*/
+/* Open Sans cuerpo de texto */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+/* Unna Titulos */
+@import url('https://fonts.googleapis.com/css2?family=Unna&display=swap');
+
+/*
+------------------------------- 
+Colores 
+-------------------------------
+*/
+:root {
+    --color-negro: #000;
+    --color-naranja:#cf4c2e;
+    --color-cafe: #9c795d;
+  }
+
+
+/*
+------------------------------- 
+---------------------------------------------Inicio---------------------------------------------------------------- 
+-------------------------------
+*/
+
+h1{position: relative; top:0; display: none;}
+
+.home-contenedor{
+    width: 100vw;
+    height: 100vh;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+/*
+------------------------------- 
+Header - nav 
+-------------------------------
+*/
+.header{
+    width:100%;
+    height: 8.5%;
+    background: var(--color-negro);
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    display:grid;
+    grid-template-columns: 70% 15% 15%;
+    grid-template-rows: 90% 10%;
+    padding: 3.2%;
+}
+
+/* logo */
+.logo{
+    width: 30%;
+    height: 95%;
+    background: url(../svg/TheRebisMagazineLogo.svg) no-repeat;
+    align-self: center;
+    position: relative;
+}
+
+/* busqueda */
+.busqueda{
+    width: 1.2em;
+    height: 1.2em;
+    background: url(../svg/search.svg) no-repeat;
+    align-self: center;
+    justify-self: center;
+    
+}
+/* Menu hamburguesa */
+#menu{
+	position: relative;
+    z-index: 10;
+    align-self: center;
+    justify-self: center;
+} 
+
+
+#menu span{
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+    transition: .5s;
+    width: 1.5em;
+    height: .12em;
+    background: #fff;
+    align-self: center;
+    justify-self: center; 
+    
+
+}
+
+#menu span::before{
+	display: inline-block;
+	transition: .5s;
+    content: "";
+    position: absolute;
+    top: -.5em;
+    right: 0;
+    width: 1.2em;
+    height: .12em;
+    background: #fff;
+    align-self: center;
+    justify-self: center; 
+}
+
+#menu span::after{
+	display: inline-block;
+	transition: .5s;
+    content: "";
+    position: absolute;
+    top: .5em;
+    right: 0;
+    width: 1.2em;
+    height: .12em;
+    background: #fff;
+    align-self: center;
+    justify-self: center; 
+}
+/*
+----------------------
+Checked
+---------------------
+*/
+
+#check1:checked ~  #menu span {
+	background: var(--color-negro);
+}
+
+#check1:checked ~ #menu span::before {
+	transform: rotate(-135deg);
+	top: 0;
+}
+
+#check1:checked ~ #menu span::after {
+	transform: rotate(135deg);
+	top: 0;
+}
+
+#check1:checked ~ #hide {
+	left:0%;
+	overflow: hidden;
+}
+
+
+#check1:checked ~ #hide > #img {
+    transition-delay: .6s;
+	opacity: 1;
+}
+
+#check1:checked ~ #hide > nav {
+    transition-delay: .3s;
+	opacity: 1;
+}
+
+#check1:checked ~ #hide > .redes-sociales-movil-menu {
+    transition-delay: .5s;
+	opacity: 1;
+}
+
+
+/* indicador scroll */
+.indicador-scroll{
+    position: fixed;
+    top: 8.5%;
+    left:0;
+    z-index: 1;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+  }
+  .progress-bar {
+    height: 8px;
+    background: var(--color-naranja);
+    width: 0%;
+  }
+
+
+/* imagen inicio */
+.imagen-inicio{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    object-fit:cover;
+    object-position: center;
+}
+
+/* titulo del home */
+.titulo-home{
+    color:#fff;
+    position: relative;
+    font-family: 'Unna', serif;
+    font-size: 3.5em;
+    top:55%;
+    z-index: 1;
+    text-align: center;
+    line-height: 1.1em;
+    width: 94%;
+
+}
+
+/* boton home */
+.boton-home{
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: none;
+    border:1px solid #fff;
+    border-radius: 10px;
+    width: 15em;
+    height: 2.6em;
+    top:55vh;
+    color:#fff;
+    font-size: .9em;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+.boton-home:focus{
+    outline:none;
+}
+
+/* scroll down */
+.scroll-down{
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    width: 25%;
+    height: 4%;
+    display: flex;
+    left:75%;
+    top:62%;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: rotate(90deg);
+}
+.scroll-down > h5{
+    color:#fff;
+    font-size: .6em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.scroll-down > .flecha{
+    background: url(../svg/flecha.svg) no-repeat;
+    width: 2em;
+    height: 1em;
+    animation: flecha 2s ease-in-out infinite;
+    transition: .5s;
+}
+
+/*
+------------------------------- 
+Menu oculto
+-------------------------------
+*/
+.menu-movil{
+    width: 100vw;
+    height: 100vh;
+    background: var(--color-negro);
+    position: absolute;
+    top:0;
+    z-index: 4;
+    overflow: hidden;
+    left:100%;
+    /* display: none; */
+}
+/* --------Navegacion---------- */
+nav,.redes-sociales-movil-menu{
+    width: 40vw;
+    position: absolute;
+    top:20vh;
+    z-index: 3;
+    margin-left: 8%;
+    opacity: 0;
+
+} 
+nav > ul > li {
+    list-style: none;
+    margin-bottom: 45%;
+    line-height: 1.5em;
+}
+nav > ul > li > a{
+    color:#fff;
+    font-family: 'Unna', serif;
+    font-size: 1.3em;
+}
+
+/* --------Redes sociales menu oculto---------- */
+.redes-sociales-movil-menu{
+    height: 1.4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    top:90vh;
+}
+.redes-sociales-movil-menu > a > div{
+    width: 6vw;
+    height: 1.5em;
+    
+}
+.redes-sociales-movil-menu >  a:nth-child(1) > div{
+    background: url(../svg/facebook.svg) no-repeat;
+}
+.redes-sociales-movil-menu > a:nth-child(2) > div{
+    background: url(../svg/instagram.svg) no-repeat;
+}
+.redes-sociales-movil-menu > a:nth-child(3) > div{
+    background: url(../svg/pinterest.svg) no-repeat;
+}
+
+/* --------Imagen del menu---------- */
+.imagen-menu-oculto{
+    width: auto;
+    height: 80vh;
+    position: absolute;
+    right: -12em;
+    bottom: 0;
+    opacity: 0;
+}
+
+
+
+
+/*
+------------------------------- 
+---------------------------------------------Articulos---------------------------------------------------------------- 
+-------------------------------
+*/
+/* contenedor padre */
+.articulos{
+    height: 90vh;
+    position: relative;
+    padding-right: 0;
+    
+}
+
+/* titulos principales */
+.titulos-principales, .titulo-sesion-personaje{
+    text-align: center;
+    font-size: 1.7em;
+    font-family: 'Unna', sans-serif;
+    color:var(--color-negro);
+    padding-top: 1em;
+}
+/* swiper contenedor */
+.articulos > .swiper-wrapper{
+    padding-top: 6%;
+    height: 75%;
+    cursor:grab;
+}
+.articulos > .swiper-wrapper > div{
+    background:#fff;
+    height: 75%;
+    border-radius: 10px;
+    
+}
+
+/* bullets */
+ .swiper-pagination-bullet-active-next{
+     background: var(--color-negro);
+ }
+ .swiper-pagination-bullet-active-main{
+     background: var(--color-naranja);
+ }
+
+ .articulos > .swiper-pagination{
+     top:82%;
+ }
+ /* Boton */
+ .boton-ver-mas{
+    position: absolute;
+    z-index: 1;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background: var(--color-naranja);
+    border:none;
+    border-radius: 10px;
+    width: 16.5em;
+    height: 2.6em;
+    color:#fff;
+    font-size: .9em;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+.boton-ver-mas:focus{
+    outline:none;
+}
+
+/*
+------------------------------- 
+Cards de cada Post
+-------------------------------
+*/
+/* imagen destacada */
+.imagen-destacada{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+/* titulo de cada post */
+.titulo-post-card{
+    z-index: 4;
+    position: relative;
+    padding-left:.5em;
+    bottom:-60%;
+    color:#fff;
+    font-family: "Unna", sans-serif;
+    width: 80%;
+    text-transform: uppercase;
+
+}
+
+/* Categoria de cada Post */
+.categoria-card{
+    position: absolute;
+    z-index: 4;
+    width: 40%;
+    height: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    right:0;
+    top:3%;
+}
+
+.categoria-card > h5{
+    font-size: .85em;
+    font-family: "Unna", sans-serif;
+    color:var(--color-cafe);
+    margin:0;
+}
+/*
+------------------------------- 
+------------------------------------------Personaje Semanal---------------------------------------------------------------- 
+-------------------------------
+*/ 
+/* Contenedor principal personaje semanal */
+
+.personaje-semanal{
+    width:100vw;
+    height: 90vh;
+    position: relative;
+    background: var(--color-negro);
+    padding-top:8%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor:grab;
+    
+}
+
+/* titulo de la sesion */
+.titulo-sesion-personaje{
+    color: #fff;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* Contenedor de cada personaje card */
+.personaje-card{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+
+.imagen-personaje-semanal{
+    width: 100%;
+    height: 65vh;
+    position: absolute;
+    top:0;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Frase del personaje */
+.frase-personaje{
+    color:#fff;
+    width:75%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 4;
+    font-size: .85em;
+    font-family: "Open sans", sans-serif;
+    position: relative;
+    top:45vh;
+}
+
+/* raya de decorado personaje */
+.personaje-card > div > span{
+    width: 30vw;
+    height: .1em;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    background: #fff;
+    position: relative;
+    top:45.3vh;
+    z-index: 4;
+}
+
+/* titulo Personaje */
+.titulo-personaje{
+    color:#fff;
+    text-align: center;
+    position: relative;
+    top:46.3vh;
+    font-size: 2em;
+    font-family: "Unna", sans-serif;
+    text-transform: uppercase;
+    z-index: 4;
+}
+
+/* personaje bullets */
+.personaje-bullets{
+    transform: translateX(-50%);
+    position: absolute;
+    top:65vh;
+    left:50%;
+    z-index: 4;
+}
+
+/*
+------------------------------- 
+------------------------------------------formulario subscripcion ---------------------------------------------------------------- 
+-------------------------------
+*/ 
+/* Contenedor principal del formulario */
+.formulario-subscripcion{
+    height: 30%;
+    padding: 1em;
+    background: var(--color-cafe);
+    position: relative;
+    margin-bottom:1em;
+}
+/* titulo */
+.formulario-subscripcion > h2{
+    color:#fff;
+}
+
+/* contenedor input */
+#contenedor-input{
+    padding-top: 1em;
+}
+/* boton de subscribirse */
+#button-addon2{
+    color:#fff;
+    border-color:#fff;
+    font-family: "Unna", sans-serif;
+}
+#button-addon2:hover{
+    color:#fff;
+    border-color:#cf4c2e;
+    background: #cf4c2e;
+}
+
+/*
+------------------------------- 
+------------------------------------------Sabias Que ---------------------------------------------------------------- 
+-------------------------------
+*/ 
+/* Contenedor principal Sabias Que */
+.sabias-que{
+    width:100vw;
+    height:91vh;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    overflow-x: hidden;
+}
+/* imagen de sabias que */
+.imagen-sabias-que{
+    width:100%;
+    height:55vh;
+    object-fit:cover;
+}
+
+.sabias-que-texto{
+    height:35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+/* titulo */
+.sabias-que-texto > h3{
+    font-size: 1.6em;
+}
+/* raya decorativa */
+.sabias-que-texto > span{
+    width: 30vw;
+    height: .1em;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    background:var(--color-naranja);
+    position: relative;
+}
+
+/*parrafo de texto */
+.sabias-que-texto > p{
+    text-align: center;
+    font-family: "Open sans", sans-serif;
+    position: relative;
+    padding: 0 3em 0 3em;
+    font-size: .85em;
+    color:var(--color-negro);
+
+}
+
+/*
+------------------------------- 
+------------------------------------------Análisis libro de la semana ---------------------------------------------------------------- 
+-------------------------------
+*/ 
+/* Contenedor principal analisis libro de la semana */
+.analisis-libro-semanal{
+    width:100vw;
+    height:auto;
+    position: relative;
+}
+
+/* Parte Uno - primer articulo el mas actual*/
+.parte-uno{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.4em;
+}
+/* imagen del libro */
+.parte-uno > .portada-libro {
+    width: 42%;
+    height: 14em;
+    object-fit: cover;
+    border-radius:10px;
+}
+
+/* autor del libro */
+.parte-uno > .autor-libro, .parte-uno > .autor-post {
+    font-size: .9em;
+    font-family: "Open sans", sans-serif;
+    font-weight: lighter;
+    margin-top:1em;
+}
+
+/* titulo del libro */
+.parte-uno > .titulo-libro{
+    font-family: "Unna", sans-serif;
+}
+
+/*linea de decorado  */
+.parte-uno > span{
+    width: 30vw;
+    height: .1em;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    background:var(--color-naranja);
+    position: relative;
+    
+}
+
+/* Parrafos de texto */
+.parte-uno > p{
+    font-family: "Open sans", sans-serif;
+    font-size: .9em;
+    margin-top: .8em;
+    text-align: left;
+    line-height: 20pt;
+
+}
+
+/* Parte Dos - Se renderiza los ultimos post del tipo*/
+/* contenedor */
+.parte-dos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2%;
+}
+
+
+/* contenedor otros post */
+.otros-post-contenedor{
+    /* padding: 2em; */
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(auto-fill, minmax(250px , 1fr));
+}
+
+
+/* sub-grid */
+.sub-grid{
+    width:100%;
+    height: 13em;
+}
+
+/* decorado */
+.sub-grid > span{
+    width: 90%;
+    height: .1em;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    background:var(--color-naranja);
+    position: relative;
+}
+
+.contenido-post{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin-top: 1em;
+    
+} 
+
+.contenido-post > .imagen-sub-grid-post{
+    width: 75%;
+    height: 10em;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.contenido-post > .texto-sub-grid{
+    padding: 8% 2%;
+}
+
+.contenido-post > .texto-sub-grid > .titulo-post{
+    font-family: "Unna", sans-serif;
+    font-size: 1.2em;
+    color:#000;
+}
+
+.contenido-post > .texto-sub-grid > .autor{
+    font-family: "Open sans", sans-serif;
+    font-size: .8em;
+    color:#000;
+    font-weight: lighter;
+}
+
+
+/*
+------------------------------- 
+---------------------------------------------Sobre Nosotros---------------------------------------------------------------- 
+-------------------------------
+*/
+
+#sobre-nosotros{
+    width: 100%;
+    height: 95%;
+    margin-top: 10%;
+    padding: 1.97em;
+    position: relative;
+}
+
+/* parrafos sobre nosotros*/
+#sobre-nosotros > p{
+    font-family: "Open sans", sans-serif;
+    font-size: .9em;
+    margin-top: .8em;
+    text-align: left;
+    line-height: 20pt;
+    
+}
+
+/* frase sobre nosotros */
+.frase-sobre-nosotros{
+    text-align: center !important;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: .96em !important; 
+}
+
+.frase-sobre-nosotros > strong{
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*
+------------------------------- 
+---------------------------------------------Nuestras Redes---------------------------------------------------------------- 
+-------------------------------
+*/
+
+.redes-footer{
+    width: 60%;
+    height: 4em;
+    display: flex;
+    justify-content: space-around;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+    
+}
+
+.redes-footer > a > div{
+    width: 2em;
+    height: 1.8em;
+    
+}
+.redes-footer >  a:nth-child(1) > div{
+    background: url(../svg/facebook-color.svg) no-repeat;
+}
+.redes-footer > a:nth-child(2) > div{
+    background: url(../svg/instagram-color.svg) no-repeat;
+}
+.redes-footer > a:nth-child(3) > div{
+    background: url(../svg/pinterest-color.svg) no-repeat;
+}
+/*
+------------------------------- 
+---------------------------------------------Foooter---------------------------------------------------------------- 
+-------------------------------
+*/
+footer{
+    background: var(--color-negro);
+    width: 100%;
+    height: 30vh;
+}
+
+/* contenedor secundario */
+footer > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    padding: 1.5em;
+}
+
+footer > div > a > h4{
+    width: 1fr / 4;
+    color:#fff;
+    font-size: .75em;
+    font-family: "Open sans", sans-serif;
+    margin-top: 1.5em;
+
+}
+
+/* Footer Creditos */
+.creditos-footer{
+    font-size: .6em;
+    font-family: "Open sans", sans-serif;
+    color: #fff;
+    font-weight: lighter;
+    text-align: center;
+    position: relative;
+    bottom:-3em;
+    
+}
+
+
+
+/*
+------------------------------- 
+---------------------------------------------Animaciones---------------------------------------------------------------- 
+-------------------------------
+*/
+
+@keyframes flecha{
+    0%{
+    
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(.5em);
+
+    }
+
+    100%{
+        transform: translateX(0);
+
+    }
+}
+
+
+
+
+
+/*
+------------------------------- 
+---------------------------------------------Media Queries---------------------------------------------------------------- 
+-------------------------------
+*/
+@media only screen and (max-width: 600px) {
+    .swiper-button-next, .swiper-button-prev{color:red !important; display: none;}
+}
