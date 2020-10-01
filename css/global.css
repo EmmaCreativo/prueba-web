@@ -343,7 +343,7 @@ nav > ul > li > a{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    top:90vh;
+    top:80vh;
 }
 .redes-sociales-movil-menu > a > div{
     width: 6vw;
