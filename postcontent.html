@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000"/>
+    <title>The Rebis Magazine</title>
+    <!--********************************* IMPORTAR ESTILOS******************************** -->
+    <!-- Normalize css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Swiper css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Mis estilos -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/postcontent.css">
+</head>
+<body>
+    <!-- ****************Contenedor del inicio******************************************************* -->
+    <div class="home-contenedor">
+        <!-- Menu -->
+        <div class="header">
+            <input type="checkbox" id="check1">
+            <div class="logo"></div>
+            <div class="busqueda"></div>
+            <div id="menu">
+                <label for="check1">
+                    <span></span>
+                </label>
+            </div>
+             <!-- Indicador de scroll -->
+            <div class="indicador-scroll">
+                <div class="progress-container">
+                    <div class="progress-bar" id="myBar"></div>
+                </div>  
+            </div> 
+            
+             <!-- menu oculto -->
+            <div id="hide" class="menu-movil">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="category.html">Artículos</a></li>
+                        <li><a href="category.html">Conocimiento Práctico</a></li>
+                        <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                    </ul>
+                </nav>
+                <div class="redes-sociales-movil-menu">
+                    <a href="http://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                        <div></div>
+                    </a>
+
+                    <a href="http://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                        <div></div>
+                    </a>
+
+                    <a href="http://www.pinterest.com" target="_blank" rel="noopener noreferrer">
+                        <div></div>
+                    </a>
+                    <!-- <div></div>
+                    <div></div>
+                    <div></div> -->
+                </div>
+                
+                <img src="images/img02.jpg" class="imagen-menu-oculto" id="img">   
+            </div>
+        </div>
+        <!-- <h2 class="titulo-home">BACO Y EL MITO SOLAR</h2>
+        <button class="boton-home">Ver Más</button>
+        <div class="scroll-down">
+            <h5>SCROLL</h5>
+            <div class="flecha"></div>
+        </div>
+        <img src="images/img01.jpg" aria-label="imagen principal" class="imagen-inicio"> -->
+       
+        
+        <h1>The Rebis Magazine</h1>
+    </div>
+
+    <!-- ****************Contenedor Los Post de Cierta categoria******************************************************* -->
+    <section class="container-fluid category-post">
+        <h2 class="titulos-principales">Artículos Recientes</h2>
+
+        
+
+      
+
+       <!-- Boton ver mas posts -->
+       <button class="boton-ver-mas">Cargar Más</button>
+
+    </section>
+    
+
+    <!-- ****************Contenedor del footer******************************************************* -->
+    <footer>
+        <div>
+            <a href="">
+                <h4>Inicio</h4>
+            </a>
+            <a href="">
+                <h4>Artículos</h4>
+            </a>
+            <a href="">
+                <h4>Sobre Nosotros</h4>
+            </a>
+            <a href="">
+                <h4>Contácto</h4>
+            </a>
+            <a href="">
+                <h4>Políticas de Privacidad</h4>
+            </a>
+        </div>
+        <a href="">
+            <h4 class="creditos-footer">©The Rebis Magazine 2020</h4>
+        </a>
+    </footer>
+    
+
+
+    <!--********************************* IMPORTAR JAVASCRIPT******************************** -->
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <!-- Bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- Swiper js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- App js -->
+    <script src="js/app.js"></script>
+</body>
+</html>

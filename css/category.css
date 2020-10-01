@@ -1,0 +1,146 @@
+/*
+------------------------------- 
+---------------------------------------------Contenedor principal--------------------------------------------------------------- 
+-------------------------------
+*/
+
+/*
+------------------------------- 
+home-contenedor 
+-------------------------------
+*/
+
+.home-contenedor{
+    height: 10vh;
+}
+
+
+.titulos-principales{
+    margin-bottom: 1em;
+}
+
+/*
+------------------------------- 
+contenedor principal de categoria
+-------------------------------
+*/
+
+.category-post{
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-bottom: 2em;
+    padding: 0;
+   
+}
+
+
+.category-post-grid{
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(auto-fill, minmax(250px , 1fr));
+
+}
+/*
+------------------------------- 
+contenedor principal de cada post por categoria
+-------------------------------
+*/
+
+/* contenedor post */
+.article-category-post{
+    width:100%;
+    height: auto;
+    margin-top: .5em;
+    
+   
+}
+
+.sub-wrapper{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 25em;
+}
+
+
+/* imagen principal de cada post */
+.sub-wrapper > img{
+    width: 100%;
+    height: 16em;
+    object-fit: cover;
+
+}
+
+
+/* titulo post */
+.titulo-post-category{
+    text-align: left;
+    font-size: 1.8em;
+    margin-left: 1em;
+    margin-right: 1em;
+    font-family: 'Unna', serif;
+    color:var(--color-negro);
+    font-weight: 500;
+}
+
+/* contenedor de categorias */
+.categories{
+    width: 85%;
+    height: auto;
+    margin-left: 2em;
+    margin-right: 2em;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(75px , 1fr));
+
+}
+
+/* cada categoria */
+.category-wrapper{
+    border: 1px solid #9c795d;
+    width: 100%;
+    height: 1.6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-wrapper > h4{
+    font-size: 1em;
+    color: #9c795d;
+    font-family: "Unna", serif;
+    margin: 0;
+}
+
+
+
+
+/* boton ver mas */
+.boton-ver-mas{
+    position: relative;
+    margin-top: 2em;
+}
+
+
+
+/*
+------------------------------- 
+---------------------------------------------Responsive Media Queries--------------------------------------------------------------- 
+-------------------------------
+*/
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    .category-post-grid{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+
+
+}
