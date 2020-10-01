@@ -1,3 +1,15 @@
+/*
+------------------------------- 
+Fuentes 
+-------------------------------
+*/
+/* Open Sans cuerpo de texto */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+/* Unna Titulos */
+@import url('https://fonts.googleapis.com/css2?family=Unna&display=swap');
+
+
+/* reset */
 *{
     margin: 0;
     padding: 0;
@@ -34,15 +46,6 @@ body::-webkit-scrollbar {
     background: #ccc;
     border-radius: 4px;
   }
-/*
-------------------------------- 
-Fuentes 
--------------------------------
-*/
-/* Open Sans cuerpo de texto */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap');
-/* Unna Titulos */
-@import url('https://fonts.googleapis.com/css2?family=Unna&display=swap');
 
 /*
 ------------------------------- 
@@ -387,7 +390,7 @@ nav > ul > li > a{
 .titulos-principales, .titulo-sesion-personaje{
     text-align: center;
     font-size: 1.7em;
-    font-family: 'Unna', sans-serif;
+    font-family: 'Unna', serif;
     color:var(--color-negro);
     padding-top: 1em;
 }
@@ -461,7 +464,7 @@ Cards de cada Post
     padding-left:.5em;
     bottom:-60%;
     color:#fff;
-    font-family: "Unna", sans-serif;
+    font-family: "Unna", serif;
     width: 80%;
     text-transform: uppercase;
 
@@ -483,7 +486,7 @@ Cards de cada Post
 
 .categoria-card > h5{
     font-size: .85em;
-    font-family: "Unna", sans-serif;
+    font-family: "Unna", serif;
     color:var(--color-cafe);
     margin:0;
 }
@@ -566,7 +569,7 @@ Cards de cada Post
     position: relative;
     top:46.3vh;
     font-size: 2em;
-    font-family: "Unna", sans-serif;
+    font-family: "Unna", serif;
     text-transform: uppercase;
     z-index: 4;
 }
@@ -606,7 +609,7 @@ Cards de cada Post
 #button-addon2{
     color:#fff;
     border-color:#fff;
-    font-family: "Unna", sans-serif;
+    font-family: "Unna", serif;
 }
 #button-addon2:hover{
     color:#fff;
@@ -709,7 +712,7 @@ Cards de cada Post
 
 /* titulo del libro */
 .parte-uno > .titulo-libro{
-    font-family: "Unna", sans-serif;
+    font-family: "Unna", serif;
 }
 
 /*linea de decorado  */
@@ -793,7 +796,7 @@ Cards de cada Post
 }
 
 .contenido-post > .texto-sub-grid > .titulo-post{
-    font-family: "Unna", sans-serif;
+    font-family: "Unna", serif;
     font-size: 1.2em;
     color:#000;
 }
