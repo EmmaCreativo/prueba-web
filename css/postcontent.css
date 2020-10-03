@@ -1,3 +1,5 @@
+
+
 /*
 ------------------------------- 
 ---------------------------------------------Contenedor principal--------------------------------------------------------------- 
@@ -15,6 +17,122 @@ home-contenedor
 }
 
 
+/* Contenedor principal */
+.category-post{
+    height: auto;
+    position: relative;
+    margin-bottom: 10%;
+    padding: 0;
+}
+
+
+/*Imagen destacada del post */
+
+.category-post > img{
+    width: 100vw;
+    height: 25em;
+    object-fit: cover; 
+    object-position: center;
+}
+
+/* contenedor del contenido del post */
+.content-post{
+    /* outline: 1px solid red; */
+    width: 100%;
+    max-width: 70%;
+    min-width: 90%;
+    padding:0;
+}
+
+/*
+------------------------------- 
+Part One
+-------------------------------
+*/
+.part-one, .part-two{
+    padding: 2em 5% 0 5%;
+}
+
+/* titulo de cada post */
+.titulo-cada-post{
+    font-size: 2.2em;
+    font-family:"Unna", serif;
+    color: #000;
+    font-weight: 500;
+    line-height: 95%;
+    margin-bottom: 5%;
+}
+/* Decorado */
+
+.part-one > span {
+    width: 90%;
+    height: .1em;
+    /* margin-left: auto;
+    margin-right: auto; */
+    display:block;
+    background:var(--color-naranja);
+    position: relative;
+    margin-bottom: 5%;
+}
+/* Autor Fecha */
+.autor-fecha-post{
+    font-size: .85em;
+    font-family:"Open sans", sans-serif;
+    color: #000;
+    margin-bottom: 5%;
+}
+
+
+/* categorias de cada post */
+.categoria-wrapper{
+    width: 85%;
+    height: auto;
+    /* margin-left: 2em;
+    margin-right: 2em; */
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(75px , 1fr));
+}
+
+/* cada categoria recuadro */
+.categoria-post{
+    border: 1px solid #9c795d;
+    width: 100%;
+    height: 1.6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categoria-post > h4{
+    font-size: 1em;
+    color: #9c795d;
+    font-family: "Unna", serif;
+    margin: 0;
+}
+
+
+/*
+------------------------------- 
+Part Two
+-------------------------------
+*/
+/* contenido del post */
+/* parrafos */
+.content > p{
+    font-family:"Open sans", sans-serif;
+    font-size: .9em;
+    color:#000;
+    line-height: 20pt;
+}
+/* imagenes */
+.content > img{
+    width: 100%;
+    height: 20em;
+    object-fit: cover;
+    object-position: center;
+    margin: 2% 0 5% 0;
+}
 
 
 
