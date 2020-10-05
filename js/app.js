@@ -11,6 +11,7 @@ function myFunction() {
 }
 
 // Código de Swiper JS--------------------------------------------------------------
+// card de cada post y articulo
 var swiper = new Swiper('.swiper-container', {
   slidesPerView: 1.5,
   spaceBetween: 30,
@@ -21,9 +22,23 @@ var swiper = new Swiper('.swiper-container', {
     dynamicBullets: true,
     clickable: true,
   },
+  breakpoints: {
+        640: {
+          slidesPerView: 2.5,
+          spaceBetween: 20,
+        },
+        // 768: {
+        //   slidesPerView: 4,
+        //   spaceBetween: 40,
+        // },
+        // 1024: {
+        //   slidesPerView: 5,
+        //   spaceBetween: 50,
+        // },
+  }
 });
 
-
+// sesion del personaje de la semana
 var swiper2 = new Swiper('.personaje', {
   slidesPerView: 1,
   spaceBetween: 30,
